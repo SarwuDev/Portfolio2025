@@ -38,6 +38,11 @@ body{
   justify-content: center;
   align-items: center;
 }
+.linksBar{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 .emailButton{
   max-height: 90px;
 }
