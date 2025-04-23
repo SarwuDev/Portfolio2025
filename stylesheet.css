@@ -1,0 +1,139 @@
+:root{
+  --sky: #E0F2F3;
+  --navy: #182D3B;
+}
+@font-face {
+  font-family: SpecialGothic;
+  src: url(fonts/SpecialGothicExpandedOne.ttf);
+}
+.plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.special-gothic {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+html{
+  height: 100%;
+  width: 100%;
+}
+h1{
+  margin: 0;
+  margin-bottom: 20px;
+  color: var(--navy);
+  line-height: 90%;
+}
+body{
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--sky);
+}
+.title{
+  justify-content: center;
+  align-items: center;
+}
+.emailButton{
+  max-height: 90px;
+}
+nav{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  white-space: nowrap;
+}
+
+@media only screen and (min-width:601px)  {
+  body{
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+  }
+  h1{
+    font-size: clamp(64px, 9vw, 128px);
+  }
+  .spacer{
+    width: 8vw;
+  }
+  .title{
+    margin-left: auto;
+    display: inline-block;
+    flex-direction: column;
+    max-width: 50%;
+  }
+  .linksBar img{
+    margin-right: 10px;
+    height: 60px;
+  }
+  nav{
+    margin-right: auto;
+    flex-direction: row;
+    max-width: 50%;
+  }
+  .navfolder{
+    max-width: 10vw;
+  }
+  .navbutton{
+    margin: 20px;
+  }
+}
+@media only screen and (max-width:600px)  {
+  body{
+    width: 100%;
+    flex-direction: column;
+  }
+  h1{
+    font-size: 64px;
+    margin-bottom: 20px;
+  }
+  .title{
+    margin-top: 5vw;
+    margin-bottom: .5vw;
+    display: inline-block;
+    flex-direction: column;
+  }
+  .linksBar img{
+    margin-right: 5px;
+    height: 45px;
+  }
+  nav{
+    margin-bottom: 5vw;
+    margin-top: .5vw;
+    flex-direction: row;
+  }
+  .navfolder{
+    max-width: 20vw;
+  }
+  .navbutton{
+    margin: 20px;
+  }
+}
+.navbutton {
+  display: flex; /* This creates a "flexible" box, where all items inside are adjusted based on the flex container*/
+  flex-direction: column; /* This says "all code to align items will affect them on the vertical (up-down) axis */
+  align-items: center; /* This aligns all items including images and text on whatever axis the flex-diretion is set to*/
+  text-align: center;
+}
+.navfolder {
+  height: auto;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+}
+nav img{
+  max-width: 124;
+}
+nav p{
+  margin: 6px;
+  font-size: clamp(12px, 1.8vw, 24px);
+  color: var(--navy);
+}
+a:hover{
+  opacity: 70%;
+}
