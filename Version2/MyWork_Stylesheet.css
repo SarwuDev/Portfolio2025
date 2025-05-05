@@ -1,0 +1,130 @@
+:root{
+    --sky: #E0F2F3;
+    --navy: #182D3B;
+    --lightnavy: #417BA1;
+  }
+  @font-face {
+    font-family: SpecialGothic;
+    src: url(fonts/SpecialGothicExpandedOne.ttf);
+  }
+  .plus-jakarta-sans {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+  .special-gothic {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  html{
+    height: 100%;
+    width: 100%;
+  }
+  body{
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(var(--navy) 0%, var(--lightnavy) 100%);
+  }
+  nav{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+ 
+  nav img{
+    max-height: 32px;
+    margin-right: 50px;
+  }
+  a{
+    text-decoration: none;
+  }
+  .headertext{
+    margin-bottom: 10px;
+    margin-right: 50px;
+  }
+  .navlinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: nowrap;
+  }
+h1{
+    margin: 0;
+    font-size: clamp(24px, 8vw, 48px);
+    font-family: "SpecialGothic";
+    color: var(--sky);
+}
+.workContent{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.simpleMenu{
+  text-align: right;
+  justify-content: right;
+  margin-right: 40px;
+}
+.simpleMenu p{
+  display: block;
+  white-space: nowrap;
+  font-size: clamp(12px, 2vw, 24px);
+  font-family: "Special Gothic Expanded One";
+  color: var(--sky);
+}
+.simpleMenu p:hover {
+    color: var(--lightnavy);
+    transition: color 250ms;
+    cursor: grab;
+}
+.display{
+    margin: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.display img{
+  max-width: 70%;
+  height: auto;
+}
+.superMenu{
+  display: none;
+}
+@media only screen and (max-width: 812px) {
+    .simpleMenu{
+        visibility: hidden;
+    }
+    .superMenu{
+        visibility: visible;
+        position: absolute;
+        top: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .superMenuTextBox{
+        width: 200px;
+        height: 30px;
+        display: flex;
+        margin: 0px 2px;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--sky);
+        font-family: "Special Gothic Expanded One";
+        font-size: 12px;
+        color: var(--navy);
+        text-align: center;
+    }
+    .arrow {
+        background-color: transparent;
+        border: none;
+        font-size: 32px;
+        cursor:pointer;
+        color: var(--sky);
+      }
+}
