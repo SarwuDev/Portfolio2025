@@ -3,7 +3,7 @@
   --navy: #182D3B;
 }
 @font-face {
-  font-family: SpecialGothic;
+  font-family: "SpecialGothic";
   src: url(fonts/SpecialGothicExpandedOne.ttf);
 }
 .plus-jakarta-sans {
@@ -80,6 +80,9 @@ nav{
     flex-direction: row;
     max-width: 50%;
   }
+  canvas{
+    max-height: 10vw;
+  }
   .navfolder{
     max-width: 10vw;
   }
@@ -101,8 +104,13 @@ nav{
     margin-bottom: .5vw;
     display: inline-block;
     flex-direction: column;
+    justify-content: center;
+  }
+  .linksBar{
+    justify-content: center;
   }
   .linksBar img{
+    align-items: center;
     margin-right: 5px;
     height: 45px;
   }
@@ -112,7 +120,11 @@ nav{
     flex-direction: row;
   }
   .navfolder{
+    max-height: 10vw;
+  }
+  canvas{
     max-width: 20vw;
+    height: auto;
   }
   .navbutton{
     margin: 20px;
@@ -138,7 +150,9 @@ nav p{
   margin: 6px;
   font-size: clamp(12px, 1.8vw, 24px);
   color: var(--navy);
+  text-align: center;
 }
 a:hover{
   opacity: 70%;
 }
+

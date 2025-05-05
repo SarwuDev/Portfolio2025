@@ -27,7 +27,6 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    background: var(--navy);
     background: linear-gradient(var(--navy) 0%, var(--lightnavy) 100%);
   }
   nav{
@@ -62,32 +61,39 @@ h1{
     font-family: "SpecialGothic";
     color: var(--sky);
 }
-.content{
-    min-width: 100%;
+.workContent{
+    width: 100%;
     display: flex;
     align-items: center;
 }
 .simpleMenu{
-    margin: 20px 40px;
+  text-align: right;
+  justify-content: right;
+  margin-right: 40px;
 }
 .simpleMenu p{
-    display: flex;
-    justify-content: right;
-    font-size: clamp(12px, 2vw, 24px);
-    font-family: "SpecialGothic";
-    color: var(--sky);
+  display: block;
+  white-space: nowrap;
+  font-size: clamp(12px, 2vw, 24px);
+  font-family: "Special Gothic Expanded One";
+  color: var(--sky);
 }
 .simpleMenu p:hover {
     color: var(--lightnavy);
     transition: color 250ms;
+    cursor: grab;
 }
 .display{
     margin: 20px 40px;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
+}
+.display img{
+  max-width: 70%;
+  height: auto;
 }
 .superMenu{
-    visibility: hidden;
+  display: none;
 }
 @media only screen and (max-width: 812px) {
     .simpleMenu{
@@ -109,7 +115,7 @@ h1{
         align-items: center;
         justify-content: center;
         background-color: var(--sky);
-        font-family: "SpecialGothic";
+        font-family: "Special Gothic Expanded One";
         font-size: 12px;
         color: var(--navy);
         text-align: center;
