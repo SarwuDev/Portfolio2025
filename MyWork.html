@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Joshua Perkins Web Portfolio</title>
+    <title>Joshua Perkins (Work)</title>
     <link rel="stylesheet" href="MyWork_Stylesheet.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">  
-    <script src="superMenu.js" defer></script>
+    <!--<script src="superMenu.js" defer></script>-->
   </head>
   <body>
   <nav>
@@ -23,11 +23,13 @@
       <a href="AboutMe.html">
         <img src="img/Abt_Sky.png"/>
       </a>
-      <a href="Resume.html">
+      <a target="_blank" href="Resume/Perkins_May2025Resume.pdf">
         <img src="img/Res_Sky.png"/>
       </a>
     </div>
   </nav>
+<div class="mainContent">
+  <!--
   <div class="superMenu">
     <a class="arrow left">⬅️</a>
     <div class="superMenuTextBox">
@@ -35,19 +37,58 @@
     </div>
     <a class="arrow right">➡️</a>
   </div>
-  <div class="workContent">
-    <div class="display">
-      <img src="img/OverdrivePoster.jpeg">
-    </div>
-    <div class="simpleMenu">
-      <p>After Effects</p>
-      <p>Cinema 4D</p>
-      <p>Illustrator</p>
-      <p>InDesign</p>
-      <p>Photoshop</p>
-    </div>
-    </div>
+  -->
+  <div class="simpleMenu">
+    <p data-image="img/DisplayImages/OverdriveTransitionV3_Small.gif" data-image-2="img/DisplayImages/Overdrive_Screenshot.png">After Effects</p>
+    <!--<p data-image="img/DisplayImages/OverdriveTransitionV3_Small.gif">Cinema 4D</p>-->
+    <p data-image="img/DisplayImages/JumpoffPoster.png" data-image-2="img/DisplayImages/ISAMockup Large.png">Illustrator</p>
+    <p data-image="img/DisplayImages/PrintPortfolio.png" data-image-2="img/DisplayImages/PrintPortfolio2.png">InDesign</p>
+    <p data-image="img/OverdrivePoster.jpeg" data-image-2="img/DisplayImages/TwoWeeksAway.png">Photoshop</p>
+    <p data-iframe="https://www.behance.net/embed/project/168874955?ilo0=1">See More</p>
   </div>
+    <div class="display">
+      <img id="mainImage" src="img/OverdrivePoster.jpeg">
+      <iframe id="mainIframe" style="display: none;" src="https://www.behance.net/embed/project/168874955?ilo0=1" frameborder="0" width="404px" height="316px"></iframe>
+    </div>
+    
+  </div>
+<script>
+  const menuItems = document.querySelectorAll('.simpleMenu p');
+  const displayContainer = document.querySelector('.display');
+  const mainImage = document.getElementById('mainImage');
+
+  const secondaryImage = document.createElement('img');
+  secondaryImage.id = 'secondaryImage';
+  displayContainer.appendChild(secondaryImage);
+
+  menuItems.forEach(item => {
+    item.addEventListener('mouseover', () => {
+      const newSrc1 = item.getAttribute('data-image');
+      const newSrc2 = item.getAttribute('data-image-2');
+      const iframeSrc = item.getAttribute('data-iframe');
+
+      mainImage.src = newSrc1;
+
+      if (newSrc2) {
+        secondaryImage.src = newSrc2;
+        secondaryImage.style.display = 'block';
+      } else {
+        secondaryImage.style.display = 'none';
+      }
+      
+
+      if (iframeSrc) {
+        mainImage.style.display = 'none';
+        mainIframe.style.display = 'block';
+        mainIframe.src = iframeSrc;
+      } else {
+        mainIframe.style.display = 'none';
+        mainImage.style.display = 'block';
+        mainImage.src = imageSrc;
+      }
+    }
+  )});
+</script>
   </body>
 </html>
  

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Joshua Perkins Web Portfolio</title>
+    <title>Joshua Perkins (Portfolio)</title>
     <link rel="stylesheet" href="stylesheet.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,15 +27,14 @@
 
   <nav>
     <a id="workSection" href="MyWork.html">
-      <!--
+
       <div class="navbutton">
         <img class="navfolder" src="img/Wrk_Navy.png" alt="Button to see Joshua's work.">
-        -->
-        <canvas id="canvasWork"></canvas>
+        <!--
+        <canvas id="canvas"></canvas>
         <div class="content">
-
-        </div>
-        <p id="paragraph" class="plus-jakarta-sans">my work</p>
+        -->
+        <p class="plus-jakarta-sans">my work</p>
       </div>
     </a>
 
@@ -46,23 +45,21 @@
       </div>
     </a>
 
-    <a href="Resume.html">
+    <a target="_blank" href="Resume/Perkins_May2025Resume.pdf">
       <div class="navbutton">
         <img class="navfolder" src="img/Res_Navy.png" alt="Button to view Joshua's PDF resume">
-        <p class="plus-jakarta-sans">resumé</p>
+        <p class="plus-jakarta-sans">résumé</p>
       </div>
     </a>
   </nav>
 
-
+  <!--
   <script src="https://unpkg.com/@rive-app/canvas"></script>
   <script>
 
-    const btnWork = document.getElementById("workSection")
-        stateName = document.getElementById("paragraph")
-    const rWork = new rive.Rive({
-        src: "Rive/WRKrive.riv",
-        canvas: document.getElementById("canvasWork"),
+    const r = new rive.Rive({
+        src: "Rive/WorkFolder_FromWeb.riv",
+        canvas: document.getElementById("canvas"),
         autoplay: true,
         stateMachines: ["State Machine 1"],
         onLoad: () => {
@@ -70,7 +67,7 @@
         },
       
     });
+  -->
   </script>
   </body>
 </html>
- 

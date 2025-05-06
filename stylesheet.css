@@ -80,8 +80,6 @@ nav{
     flex-direction: row;
     max-width: 50%;
   }
-  canvas{
-    max-height: 10vw;
   }
   .navfolder{
     max-width: 10vw;
@@ -89,7 +87,6 @@ nav{
   .navbutton{
     margin: 20px;
   }
-}
 @media only screen and (max-width:600px)  {
   body{
     width: 100%;
@@ -121,10 +118,6 @@ nav{
   }
   .navfolder{
     max-height: 10vw;
-  }
-  canvas{
-    max-width: 20vw;
-    height: auto;
   }
   .navbutton{
     margin: 20px;
